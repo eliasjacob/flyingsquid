@@ -1,4 +1,4 @@
-from pgmpy.models import MarkovModel
+from pgmpy.models import MarkovNetwork
 from pgmpy.factors.discrete import JointProbabilityDistribution, DiscreteFactor
 from itertools import combinations
 from flyingsquid.helpers import *
@@ -36,7 +36,7 @@ class LabelModel(_triplets.Mixin, _graphs.Mixin, _observables.Mixin,
         if lambda_y_edges == []:
             lambda_y_edges = [(i, 0) for i in range(m)]
         
-        G = MarkovModel()
+        G = MarkovNetwork()
         # Add LF nodes
         G.add_nodes_from([
             'lambda_{}'.format(i)
