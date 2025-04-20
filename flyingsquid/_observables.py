@@ -1,4 +1,4 @@
-from pgmpy.models import MarkovModel
+from pgmpy.models import MarkovNetwork
 from pgmpy.factors.discrete import JointProbabilityDistribution, DiscreteFactor
 from itertools import combinations
 from flyingsquid.helpers import *
